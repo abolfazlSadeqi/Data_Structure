@@ -24,12 +24,12 @@ Queue
 
 
 ## Concurrent
-ConcurrentBagExample
+ConcurrentBag
 
-ConcurrentDictionaryExample
+ConcurrentDictionary
 
-ConcurrentQueueExample
+ConcurrentQueue
 
-ConcurrentStackExample
+ConcurrentStack
 
-blockingcollectionExample
+blockingcollection
