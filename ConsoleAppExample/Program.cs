@@ -1,5 +1,14 @@
-﻿using ConsoleAppExample.Example.Concurrent;
+﻿using BenchmarkDotNet.Configs;
+using BenchmarkDotNet.Running;
+using ConsoleAppExample.Benchmarks;
+using ConsoleAppExample.Example.Concurrent;
 using ConsoleAppExample.Example.Normal;
+
+
+BenchmarkSwitcher.FromAssembly(typeof(Program).Assembly).Run(args, new DebugInProcessConfig());
+
+System.Diagnostics.Debugger.Launch();
+var summary = BenchmarkRunner.Run<benchmarkGettemByKeyExample>();
 
 Console.WriteLine("arrayExample");
 Console.WriteLine("-");
