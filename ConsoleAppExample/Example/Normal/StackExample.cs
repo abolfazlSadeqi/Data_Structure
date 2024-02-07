@@ -17,7 +17,7 @@ public class StackExample
     public void Example()
     {
         // declare
-        Stack listexample = new Stack();
+        Stack<string> listexample = new Stack<string>();
 
         //set values
         listexample.Push("test1");
@@ -43,6 +43,9 @@ public class StackExample
 
         //count
         Console.WriteLine($"Count:    {listexample.Count}");
+
+        //Get by index
+        var _result = listexample.ElementAt(0);
 
         listexample.Clear();
 

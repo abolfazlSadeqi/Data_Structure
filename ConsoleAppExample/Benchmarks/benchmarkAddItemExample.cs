@@ -148,5 +148,17 @@ public class benchmarkAddItemExample
         
     }
 
-   
+    [Benchmark]
+    public void HashSet()
+    {
+
+        HashSet<int> _data = new HashSet<int>();
+        _data.Add(1000);
+        _data.Add(45000);
+        _data.Add(5500);
+        _data.Add(7800);
+        _data.Add(44550);
+
+    }
+
 }

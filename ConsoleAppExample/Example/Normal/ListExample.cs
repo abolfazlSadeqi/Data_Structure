@@ -21,7 +21,7 @@ public class ListExample
         //declare with init value
         List<string> Exampleskills2 = new List<string>() { "C#", "sql","DDD" };
 
-
+        
         //set values
         Exampleskills1.Add("C#");
         Exampleskills1.Add("sql");
@@ -30,6 +30,7 @@ public class ListExample
         //insert 
         Exampleskills1.Insert(3, "js");
 
+        
 
         // get data with way 1 
         for (int i = 0; i < Exampleskills2.Count; i++)

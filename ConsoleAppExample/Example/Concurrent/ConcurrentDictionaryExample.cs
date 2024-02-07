@@ -24,12 +24,18 @@ public class ConcurrentDictionaryExample
         TypeFile.TryAdd(2, "doc");
         TypeFile.TryAdd(3, "excel");
 
+        //get value by Key
+        var b = TypeFile[1];
+
+        //Edit value
+        TypeFile[1] = "ss";
 
         //get value
 
         foreach (var item in TypeFile)
             Console.WriteLine($"Key: {item.Key}, Value: {item.Value}");
-        
 
+        //Get by index
+        var _result = TypeFile.ElementAt(0);
     }
 }

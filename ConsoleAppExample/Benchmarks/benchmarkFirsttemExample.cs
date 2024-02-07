@@ -16,7 +16,7 @@ public class benchmarkFirsttemExample
     {
         var data = ExampleData.Array();
         var dd = data[0];
-
+        
     }
 
     [Benchmark]
@@ -24,7 +24,7 @@ public class benchmarkFirsttemExample
     {
         var data = ExampleData.List();
         var dd = data.First();
-
+      
     }
 
 
@@ -33,7 +33,7 @@ public class benchmarkFirsttemExample
     {
         var data = ExampleData.Dictionary();
         var dd = data.First();
-
+       
     }
 
 
@@ -42,7 +42,7 @@ public class benchmarkFirsttemExample
     {
         var data = ExampleData.Hashtable();
         var dd = data[0];
-
+        
     }
 
     [Benchmark]
@@ -50,7 +50,7 @@ public class benchmarkFirsttemExample
     {
         var data = ExampleData.Queue();
         var dd = data.Dequeue();
-
+       
     }
 
     [Benchmark]
@@ -58,6 +58,7 @@ public class benchmarkFirsttemExample
     {
         var data = ExampleData.Stack();
         var dd = data.Pop();
+     
     }
 
 
@@ -66,6 +67,7 @@ public class benchmarkFirsttemExample
     {
         var data = ExampleData.SortedDictionary();
         var dd = data.First();
+     
     }
 
     [Benchmark]
@@ -73,6 +75,7 @@ public class benchmarkFirsttemExample
     {
         var data = ExampleData.SortedList();
         var dd = data.First();
+      
     }
 
     [Benchmark]
@@ -80,6 +83,7 @@ public class benchmarkFirsttemExample
     {
         var data = ExampleData.SortedSet();
         var dd = data.First();
+      
     }
 
     [Benchmark]
@@ -87,6 +91,14 @@ public class benchmarkFirsttemExample
     {
         var data = ExampleData.LinkedList();
         var dd = data.First();
+      
     }
 
+    [Benchmark]
+    public void HashSet()
+    {
+        var data = ExampleData.HashSet();
+        var dd = data.First();
+     
+    }
 }

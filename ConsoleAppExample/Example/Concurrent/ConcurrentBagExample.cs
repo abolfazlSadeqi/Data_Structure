@@ -32,6 +32,8 @@ public class ConcurrentBagExample
 
         });
 
+      
+
         //get value 
         Task consumer = Task.Run(async () =>
         {
@@ -41,6 +43,12 @@ public class ConcurrentBagExample
         });
 
         Task.WaitAll(producer, consumer);
+
+        //get value 
+        var b = ExampleTask.FirstOrDefault(d => d == 13);
+
+        //Get by index
+        var _result = ExampleTask.ElementAt(0);
     }
 
     public void Example()
@@ -48,7 +56,7 @@ public class ConcurrentBagExample
        
         //declare
         ConcurrentBag<string> listCountry = new ConcurrentBag<string> { "Iran", "US", "Turkish", };
-
+      
         //get value
         foreach (var item in listCountry) Console.WriteLine($"value={item} ");
 

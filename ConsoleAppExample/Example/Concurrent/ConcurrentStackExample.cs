@@ -18,10 +18,10 @@ public class ConcurrentStackExample
     {
         // declare
         ConcurrentStack<string> ListProvince = new ConcurrentStack<string>();
+        
 
-
-        //set value 
-        Task producer = Task.Run(() =>
+   //set value 
+   Task producer = Task.Run(() =>
         {
 
             ListProvince.Push("Tehran");
@@ -67,6 +67,9 @@ public class ConcurrentStackExample
 
 
         await Task.WhenAll( consumer);
+
+        //Get by index
+        var _result = ListProvince.ElementAt(0);
 
         //Clear
         ListProvince.Clear();

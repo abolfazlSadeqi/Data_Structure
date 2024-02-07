@@ -12,6 +12,7 @@ public class SortedDictionaryExample
 
         //declare
         SortedDictionary<int, string> ExampleAlphabet = new SortedDictionary<int, string>();
+       
 
         //set value
         ExampleAlphabet.Add(1, "A");
@@ -20,6 +21,11 @@ public class SortedDictionaryExample
         ExampleAlphabet.Add(5, "D");
         ExampleAlphabet.Add(4, "F");
 
+        //get value by Key
+        var b = ExampleAlphabet[5];
+
+        //edit 
+       ExampleAlphabet[5]="44";
         //get value
         foreach (var item in ExampleAlphabet) Console.WriteLine($"Key={item.Key}, Value={item.Value}");
 
@@ -40,6 +46,9 @@ public class SortedDictionaryExample
         // get keys
         SortedDictionary<int, string>.KeyCollection keyColl = ExampleAlphabet.Keys;
         foreach (var item in keyColl) Console.WriteLine($"Key = {item}");
+
+        //Get by index
+        var _result = ExampleAlphabet.ElementAt(0);
 
         //remove with key
         ExampleAlphabet.Remove(1);

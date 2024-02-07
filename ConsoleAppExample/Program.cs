@@ -3,12 +3,20 @@ using BenchmarkDotNet.Running;
 using ConsoleAppExample.Benchmarks;
 using ConsoleAppExample.Example.Concurrent;
 using ConsoleAppExample.Example.Normal;
+using System.Collections.Generic;
 
 
 BenchmarkSwitcher.FromAssembly(typeof(Program).Assembly).Run(args, new DebugInProcessConfig());
 
 System.Diagnostics.Debugger.Launch();
-var summary = BenchmarkRunner.Run<benchmarkGettemByKeyExample>();
+var summary = BenchmarkRunner.Run<benchmarkArrayExample>();
+
+Console.WriteLine("HashSet");
+Console.WriteLine("-");
+
+HashSetExample hashSetExample = new HashSetExample();
+hashSetExample.Example();
+
 
 Console.WriteLine("arrayExample");
 Console.WriteLine("-");
@@ -17,6 +25,7 @@ ArrayExample arrayExample = new ArrayExample();
 arrayExample.Example_single_dimensional();
 arrayExample.Example_multiDimensional();
 arrayExample.Example_Jagged();
+
 
 Console.WriteLine("dictionaryExample");
 Console.WriteLine("-");

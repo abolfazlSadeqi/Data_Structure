@@ -24,7 +24,8 @@ public class QueueExample
         Events.Enqueue("Event2");
         Events.Enqueue("Event3");
 
-       
+        //Get by index
+        var _result = Events.ElementAt(1);
 
         //get data with Dequeue(get an item and remove it)
         Console.WriteLine($"value Dequeue={Events.Dequeue()}" );
@@ -41,6 +42,8 @@ public class QueueExample
         foreach (var item in Events) Console.WriteLine($"value after Enqueue={item}");
 
         Console.WriteLine($"Contains= {Events.Contains("Event3")}");
+
+       
 
         Events.Clear();
 

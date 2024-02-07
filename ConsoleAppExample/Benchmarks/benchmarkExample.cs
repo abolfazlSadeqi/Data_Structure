@@ -137,6 +137,17 @@ public class benchmarkExample
             _data.AddLast(data[i]);
         }
     }
+    [Benchmark]
+    public void HashSet()
+    {
+        var data = ExampleData.ExampleDatas();
+        HashSet<int> _data = new HashSet<int>();
 
-   
+        for (int i = 0; i < ExampleData.Length; ++i)
+        {
+            _data.Add(data[i]);
+        }
+    }
+
+
 }

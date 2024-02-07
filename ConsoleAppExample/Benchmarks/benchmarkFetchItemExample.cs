@@ -118,5 +118,13 @@ public class benchmarkFetchItemExample
 
         }
     }
+    [Benchmark]
+    public void HashSet()
+    {
+        var data = ExampleData.HashSet();
+        foreach (var item in data)
+        {
 
+        }
+    }
 }

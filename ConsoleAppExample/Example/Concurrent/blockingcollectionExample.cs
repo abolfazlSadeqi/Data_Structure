@@ -18,12 +18,13 @@ public class blockingcollectionExample
     public void Example1()
     {
         // declare
-        BlockingCollection<int> blockingExample = new BlockingCollection<int>(4);
-
+        BlockingCollection<Nullable< int>> blockingExample = new BlockingCollection<Nullable<int>>(4);
+        
 
         //set values with Add
         blockingExample.Add(14);
         blockingExample.Add(5);
+        blockingExample.Add(null);
 
         //set values with TryAdd
         blockingExample.TryAdd(10);
@@ -32,10 +33,15 @@ public class blockingcollectionExample
         //set values with TryAdd with use Timeout
         if (blockingExample.TryAdd(140, TimeSpan.FromSeconds(1))) { }
 
-
+        //Get value by Key
+        var b= blockingExample.FirstOrDefault(d => d == 10);
+      
         //get value
         foreach (var item in blockingExample) Console.WriteLine($"Example1,value ={item}");
 
+
+        //Get by index
+        var _result = blockingExample.ElementAt(0);
     }
 
     public void ExampleWithTask()

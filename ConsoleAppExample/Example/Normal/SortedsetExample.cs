@@ -19,10 +19,11 @@ public class sortedsetExample
     {
         //declare
         SortedSet<string> sortedSetProvinces = new SortedSet<string>();
+       
 
 
         //set values
-      
+
         sortedSetProvinces.Add("Tehran");
         sortedSetProvinces.Add("hamedan");
         sortedSetProvinces.Add("Guilan");
@@ -31,6 +32,8 @@ public class sortedsetExample
         //declare with init value
         SortedSet<string> sortedSetProvinces2 = new SortedSet<string>() {"Tehran2","esfahan"};
 
+        //get value
+        var b = sortedSetProvinces.Contains("Guilan") ? "Guilan" : "";
 
         //get value
         foreach (var item in sortedSetProvinces) Console.WriteLine($"value={item}");
@@ -49,6 +52,9 @@ public class sortedsetExample
 
         ///SetEquals:Determines whether the current SortedSet<T> object and the specified collection contain the same elements.
         Console.WriteLine($"SetEquals={sortedSetProvinces.SetEquals(sortedSetProvinces2)}");
+
+        //Get by index
+        var _result = sortedSetProvinces.ElementAt(0);
 
         //Reverse
         var sortedSetProvincesReverse = sortedSetProvinces.Reverse();

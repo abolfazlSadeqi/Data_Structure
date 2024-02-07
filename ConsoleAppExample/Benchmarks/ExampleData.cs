@@ -9,7 +9,7 @@ namespace ConsoleAppExample.Benchmarks;
 
 public class ExampleData
 {
-    public const int Length = 4;
+    public const int Length = 1000;
     
     public static int[] ExampleDatas()
     {
@@ -161,5 +161,16 @@ public class ExampleData
 
         return _data;
     }
+    public static HashSet<int> HashSet()
+    {
+        var data = ExampleData.ExampleDatas();
+        HashSet<int> _data = new HashSet<int>();
 
+        for (int i = 0; i < Length; ++i)
+        {
+            _data.Add(data[i]);
+        }
+
+        return _data;
+    }
 }

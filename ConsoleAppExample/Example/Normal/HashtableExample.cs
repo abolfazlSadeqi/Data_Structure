@@ -26,6 +26,12 @@ public class hashtableExample
 
         Console.WriteLine($"value ={listkeyword["js"]}");
 
+
+        //get value by Key
+        var b = listkeyword["js"];
+
+        //edit 
+        listkeyword["js"] = "testjs";
         // ContainsKey 
         if (!listkeyword.ContainsKey("C#")) { }
 
@@ -42,6 +48,8 @@ public class hashtableExample
         ICollection keyColl = listkeyword.Keys;
 
         foreach (var key in keyColl) Console.WriteLine($"Key = {key}");
+
+        
     }
 
 }

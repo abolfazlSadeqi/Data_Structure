@@ -18,7 +18,7 @@ public class LinkedListExample
 
         //declare
         LinkedList<string> linkedListCoutry = new LinkedList<string>();
-
+      
         //set values
         linkedListCoutry.AddLast("Iran");
         linkedListCoutry.AddLast("India");
@@ -27,10 +27,18 @@ public class LinkedListExample
 
         LinkedListNode<string> USANode = linkedListCoutry.AddLast("USA");
 
+        //Get Data by Key
+        var b = linkedListCoutry.Find("India");
+
+        //Edit value
+        linkedListCoutry.Find("Iran").Value = "Ir.Iran";
+
         //Get Data
         foreach (var item in linkedListCoutry) Console.WriteLine($"value: {item}");
 
 
+        //Get by index
+        var _result = linkedListCoutry.ElementAt(0);
 
         //Remove with different ways
         linkedListCoutry.Remove(USANode);

@@ -25,9 +25,12 @@ public class ConcurrentQueueExample
         listProvince.Enqueue("Gilan");
 
 
+        //Get by index
+        var _result = listProvince.ElementAt(0);
+
         // TryPeek:Tries to return an object from the beginning of the ConcurrentQueue<T> without removing it.
-        
-        listProvince.TryPeek(out string result);
+
+        listProvince.TryDequeue(out string result);
         Console.WriteLine($"value={result}");
 
 
@@ -41,7 +44,7 @@ public class ConcurrentQueueExample
 
             listProvince.TryDequeue(out  value);
             Console.WriteLine($"value = {value}");
-
+       
 
         };
 

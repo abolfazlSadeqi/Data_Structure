@@ -24,6 +24,7 @@ public class ArrayExample
         // Declare Way 2 with set values
         // int[] Example1 = [7, 10, 15];
 
+
         foreach (var item in Example1)
             Console.WriteLine($"Value: {item}");
         return Example1;
